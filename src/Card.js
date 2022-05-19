@@ -3,7 +3,7 @@ import './Card.css';
 
 
 const Card = (props) => {
-    const {name, image} = props;
+    const {id, name, image} = props;
     return (
         <div className = 'card pointer dim ba br3 ma2 shadow-2 dib'>
             <img alt = 'header' className = 'card-image tc br3 br--top' src={`http://${image}`} />

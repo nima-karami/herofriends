@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import CardList from './CardList'
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
-import { heroes } from './heroes';
+
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CardList heroes = {heroes} />
+    <App />
 
   </React.StrictMode>
 );
