@@ -1,5 +1,8 @@
-.card{
+.card {
     background-color: black;
+}
+
+.card-footer {
     color: white;
 }
 
