@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Avengero Regular';
+    src: url("./AvengeroRegular-zvgl.ttf");
+}
+
+h1 {
+    font-family: 'Avengero Regular';
+}
