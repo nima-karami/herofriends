@@ -5,4 +5,6 @@
 
 h1 {
     font-family: 'Avengero Regular';
+    color: white;
+    -webkit-text-stroke: 1px black;
 }
