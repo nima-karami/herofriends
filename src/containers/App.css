@@ -8,3 +8,28 @@ h1 {
     color: white;
     -webkit-text-stroke: 1px black;
 }
+
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: white black;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+ 
+
+  *::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 20px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+    border: 3px solid red;
+  }
