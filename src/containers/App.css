@@ -20,9 +20,7 @@ h1 {
   *::-webkit-scrollbar {
     width: 15px;
   }
-  
  
-
   *::-webkit-scrollbar-track {
     background: black;
     border-radius: 20px;
