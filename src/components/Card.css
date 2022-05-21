@@ -1,5 +1,6 @@
 .card {
     background-color: black;
+    width: 250px;
 }
 
 .card-footer {
