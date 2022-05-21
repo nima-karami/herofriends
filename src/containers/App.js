@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import CardList from "./CardList";
-import SearchBox from "./SearchBox";
+import CardList from "../components/CardList";
+import SearchBox from "../components/SearchBox";
+import Scroll from "../components/Scroll";
 import './App.css';
-import Scroll from "./Scroll";
-
 
 
 class App extends Component {
@@ -18,8 +17,7 @@ class App extends Component {
     componentDidMount() {
         fetch('https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json')
             .then(response => response.json())
-            .then(heroes => this.setState({ heroes: heroes }))
-        
+            .then(heroes => this.setState({ heroes: heroes }))   
     };
 
     onSearchChange = (event) => {
@@ -27,11 +25,11 @@ class App extends Component {
     }
 
     render(){
-        const filteredHeroes = this.state.heroes.filter(heroes => {
-            return heroes.name.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase());
+        const filteredHeroes = this.state.heroes.filter(hero => {
+            return hero.name.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase());
         });
         
-        if (this.state.heroes.length === 0) {
+        if (!this.state.heroes.length) {
             return <h1 className="tc f1">Loading...</h1>
         }
 
@@ -43,13 +41,10 @@ class App extends Component {
                     <Scroll>
                         <CardList heroes = {filteredHeroes} />
                     </Scroll>
-                    
                 </div>
             )
         }
-        
     }
-    
 };
 
 
