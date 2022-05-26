@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBox = ({searchChange}) => {
     return(
-        <div className="pb5">
+        <div className="pb1">
             <input className="tc pa3 ba b--black" style={{width: "30em"}} type="search" placeholder="Search Your Favorite Hero... or Villain... No Judgement!" onChange={searchChange}/>
         </div>
     );

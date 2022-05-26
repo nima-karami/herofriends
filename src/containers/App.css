@@ -32,3 +32,15 @@ h1 {
     border: 3px solid red;
   }
 
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.1em;
+}
+
+.social-link:hover {
+    font-weight: bold;
+    color:black;
+}

@@ -3,6 +3,10 @@ import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
 
 
 class App extends Component {
@@ -39,10 +43,20 @@ class App extends Component {
                     <header>
                         <h1 className="tc f1 pt4">Hero Friends</h1>
                         <SearchBox searchChange = {this.onSearchChange}/>
+                        <div  className="white pa3">
+                            <span>Created by Nima Karami </span>
+                            <a href="mailto:nkarami.dev@gmail.com" target="_blank" title="email" className="social-link"><FontAwesomeIcon className="pl2"icon={faEnvelope} /></a>
+                            <a href="https://www.linkedin.com/in/nima-karami/" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faLinkedin} /></a>
+                            <a href="https://github.com/nima-karami" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faGithub} /></a>
+                            
+                            
+                            
+                        </div>
                     </header>
                     <Scroll>
                         <CardList heroes = {filteredHeroes} />
                     </Scroll>
+                    
                 </div>
             )
         }
