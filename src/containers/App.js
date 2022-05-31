@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
+import Popup from "../components/Popup";
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
@@ -14,7 +15,9 @@ class App extends Component {
         super();
         this.state = {
             heroes: [],
-            searchField: ''
+            searchField: '',
+            buttonPopup: false,
+            popupHero: {},
         };
     }
 
@@ -48,14 +51,19 @@ class App extends Component {
                             <a href="mailto:nkarami.dev@gmail.com" target="_blank" title="email" className="social-link"><FontAwesomeIcon className="pl2"icon={faEnvelope} /></a>
                             <a href="https://www.linkedin.com/in/nima-karami/" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faLinkedin} /></a>
                             <a href="https://github.com/nima-karami" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faGithub} /></a>
-                            
+                            <button onClick={() => this.setState({buttonPopup: true})}>Open</button>
                             
                             
                         </div>
                     </header>
+                    
+                    <Popup />
+
                     <Scroll>
                         <CardList heroes = {filteredHeroes} />
                     </Scroll>
+
+                    
                     
                 </div>
             )
