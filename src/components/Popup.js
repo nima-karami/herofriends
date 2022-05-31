@@ -7,7 +7,7 @@ const Popup = (props) => {
     const {popupDisplay, setPopupDisplay, activeHero} = props;
     if (popupDisplay) {
         return (
-            <div className="popup br3">
+            <div className="popup animate fade-in">
                 <FontAwesomeIcon onClick={() => setPopupDisplay()} className="close-btn pointer" icon={faXmark} />
                 <div className = "popup-header">
                     <h1>{activeHero.name}</h1>
