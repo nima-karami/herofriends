@@ -17,7 +17,7 @@ class App extends Component {
             heroes: [],
             searchField: '',
             popupDisplay: false,
-            activeHero: 'Superman',
+            activeHero: {},
         };
     }
 
@@ -69,14 +69,12 @@ class App extends Component {
                             <a href="https://www.linkedin.com/in/nima-karami/" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faLinkedin} /></a>
                             <a href="https://github.com/nima-karami" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faGithub} /></a>
                             
-                            {/* Temp button, delete later */}
-                            <button onClick={this.setPopupDisplay}>Open</button>
                             
                             
                         </div>
                     </header>
                     
-                    <Popup popupDisplay = { this.state.popupDisplay } setPopupDisplay = { this.state.setPopupDisplay } activeHero = { this.state.activeHero }/>
+                    <Popup popupDisplay = { this.state.popupDisplay } setPopupDisplay = { this.setPopupDisplay } activeHero = { this.state.activeHero }/>
 
                     <Scroll>
                         <CardList heroes = {filteredHeroes} setActiveHero = {this.setActiveHero} />
