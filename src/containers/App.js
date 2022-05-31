@@ -16,8 +16,8 @@ class App extends Component {
         this.state = {
             heroes: [],
             searchField: '',
-            buttonPopup: false,
-            popupHero: {},
+            popupDisplay: false,
+            activeHero: 'Superman',
         };
     }
 
@@ -29,6 +29,23 @@ class App extends Component {
 
     onSearchChange = (event) => {
         this.setState({searchField: event.target.value});
+    }
+
+    setActiveHero = (hero) => {
+        this.setState({activeHero: hero});
+        this.setPopupDisplay();
+        console.log(hero);
+    }
+
+    setPopupDisplay = () => {
+        if (this.state.popupDisplay) {
+            this.setState({popupDisplay: false});
+            console.log('close popup')
+        }
+        else {
+            this.setState({popupDisplay: true})
+            console.log('open popup')
+        }
     }
 
     render(){
@@ -51,16 +68,18 @@ class App extends Component {
                             <a href="mailto:nkarami.dev@gmail.com" target="_blank" title="email" className="social-link"><FontAwesomeIcon className="pl2"icon={faEnvelope} /></a>
                             <a href="https://www.linkedin.com/in/nima-karami/" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faLinkedin} /></a>
                             <a href="https://github.com/nima-karami" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faGithub} /></a>
-                            <button onClick={() => this.setState({buttonPopup: true})}>Open</button>
+                            
+                            {/* Temp button, delete later */}
+                            <button onClick={this.setPopupDisplay}>Open</button>
                             
                             
                         </div>
                     </header>
                     
-                    <Popup />
+                    <Popup popupDisplay = { this.state.popupDisplay } setPopupDisplay = { this.state.setPopupDisplay } activeHero = { this.state.activeHero }/>
 
                     <Scroll>
-                        <CardList heroes = {filteredHeroes} />
+                        <CardList heroes = {filteredHeroes} setActiveHero = {this.setActiveHero} />
                     </Scroll>
 
                     
