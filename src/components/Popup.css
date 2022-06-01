@@ -30,17 +30,28 @@
 
 .popup-header {
     
-    width: 300px;
-    max-width: 30%;
+    
+    max-width: 320px;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: end;
 }
 
+.popup-header h1 {
+    margin: 0 0 0.5em 0;
+    max-width: 320px;
+    width: 100%;
+
+}
+
 .popup-inner {
     height: 80%;
-    max-height: 480px;     
+    max-height: 480px;
+    padding-right:50px;     
     display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
     
 }
 
@@ -59,7 +70,7 @@
     padding-right: 2em;
     padding-left: 2em;
     max-width: 60%;
-    overflow: hidden;
+    
     border-radius: 0em;
  }
 
@@ -70,6 +81,8 @@
     align-items: left;
     justify-content: start;
 }
+
+
 
 .popup span {
     text-align: left;
@@ -174,5 +187,17 @@
         padding-top: 2em ;
         padding-bottom: 2em ;
         overflow: visible;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .popup {
+        padding: 100px;
+        height: 90vh;
+        width: 90vw;
+        top: 5vh;
+        left: 5vw;
+        
     }
 }
