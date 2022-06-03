@@ -10,13 +10,17 @@ const Popup = (props) => {
             <div className="popup animate fade-in">
                 <FontAwesomeIcon onClick={() => setPopupDisplay()} className="close-btn pointer" icon={faXmark} />
                 <div className = "popup-header">
+                    
                     <h1>{activeHero.name}</h1>
 
                 </div>
 
   
                 <div className="popup-inner">
-                    <img alt = 'header' className = 'popup-image' src={`${activeHero.images.md}`} />
+                    <div className="popup-image-container">
+                        <img alt = 'header' className = 'popup-image' src={`${activeHero.images.md}`} />    
+                    </div>
+                    
 
                     <div className = "popup-biography">
                         <span>Full name: {activeHero.biography.fullName}</span> 
