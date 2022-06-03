@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/herofriends/static/css/main.611b2858.css",
-    "main.js": "/herofriends/static/js/main.d71dfc25.js",
+    "main.css": "/herofriends/static/css/main.f0adfd88.css",
+    "main.js": "/herofriends/static/js/main.9d088bc6.js",
     "static/js/787.4eee172f.chunk.js": "/herofriends/static/js/787.4eee172f.chunk.js",
     "static/media/AvengeroRegular-zvgl.ttf": "/herofriends/static/media/AvengeroRegular-zvgl.baa8fa47156dbd6a98fa.ttf",
     "index.html": "/herofriends/index.html",
-    "main.611b2858.css.map": "/herofriends/static/css/main.611b2858.css.map",
-    "main.d71dfc25.js.map": "/herofriends/static/js/main.d71dfc25.js.map",
+    "main.f0adfd88.css.map": "/herofriends/static/css/main.f0adfd88.css.map",
+    "main.9d088bc6.js.map": "/herofriends/static/js/main.9d088bc6.js.map",
     "787.4eee172f.chunk.js.map": "/herofriends/static/js/787.4eee172f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.611b2858.css",
-    "static/js/main.d71dfc25.js"
+    "static/css/main.f0adfd88.css",
+    "static/js/main.9d088bc6.js"
   ]
 }
