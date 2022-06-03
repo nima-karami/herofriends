@@ -21,38 +21,42 @@ class App extends Component {
         };
     }
 
+    // Get the hero data from the REST API
     componentDidMount() {
         fetch('https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json')
             .then(response => response.json())
             .then(heroes => this.setState({ heroes: heroes }))   
     };
 
+    // Function to change the search state
     onSearchChange = (event) => {
         this.setState({searchField: event.target.value});
     }
 
+    // Function to change the active hero
     setActiveHero = (hero) => {
         this.setState({activeHero: hero});
         this.setPopupDisplay();
         console.log(hero);
     }
 
+    // Toggle the popup display
     setPopupDisplay = () => {
         if (this.state.popupDisplay) {
             this.setState({popupDisplay: false});
-            console.log('close popup')
         }
         else {
             this.setState({popupDisplay: true})
-            console.log('open popup')
         }
     }
 
     render(){
+        // Filter the list of heroes based on the search field
         const filteredHeroes = this.state.heroes.filter(hero => {
             return hero.name.toLocaleLowerCase().includes(this.state.searchField.toLocaleLowerCase());
         });
         
+        // Wait for the heroes list to load
         if (!this.state.heroes.length) {
             return <h1 className="tc f1">Loading...</h1>
         }
@@ -68,9 +72,6 @@ class App extends Component {
                             <a href="mailto:nkarami.dev@gmail.com" target="_blank" title="email" className="social-link"><FontAwesomeIcon className="pl2"icon={faEnvelope} /></a>
                             <a href="https://www.linkedin.com/in/nima-karami/" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faLinkedin} /></a>
                             <a href="https://github.com/nima-karami" target="_blank" title="github" className="social-link"><FontAwesomeIcon className="pl2"icon={faGithub} /></a>
-                            
-                            
-                            
                         </div>
                     </header>
                     
@@ -79,9 +80,6 @@ class App extends Component {
                     <Scroll>
                         <CardList heroes = {filteredHeroes} setActiveHero = {this.setActiveHero} />
                     </Scroll>
-
-                    
-                    
                 </div>
             )
         }

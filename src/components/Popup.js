@@ -9,19 +9,15 @@ const Popup = (props) => {
         return (
             <div className="popup animate fade-in">
                 <FontAwesomeIcon onClick={() => setPopupDisplay()} className="close-btn pointer" icon={faXmark} />
-                <div className = "popup-header">
-                    
+                <div className = "popup-header">                  
                     <h1>{activeHero.name}</h1>
-
                 </div>
 
-  
                 <div className="popup-inner">
                     <div className="popup-image-container">
                         <img alt = 'header' className = 'popup-image' src={`${activeHero.images.md}`} />    
                     </div>
-                    
-
+                  
                     <div className = "popup-biography">
                         <span>Full name: {activeHero.biography.fullName}</span> 
                         <span>Also known as: {(activeHero.biography.aliases) ? activeHero.biography.aliases.join(", "): 'N/A'}</span>
@@ -40,8 +36,6 @@ const Popup = (props) => {
                         <span>Power: {activeHero.powerstats.power}</span> 
                         <span>Combat: {activeHero.powerstats.combat}</span>                     
                     </div>
-
-
 
                 </div>
             </div>
