@@ -193,7 +193,7 @@
     
     .popup-image {
         max-height: 480px;
-        max-width: 320px;
+        max-width: 260px;
         width: auto;
         height: auto;   
         
@@ -223,3 +223,42 @@
     }
 }
 
+@media screen and (max-width: 425px) {
+    .popup {
+        padding: 10px;
+        height: 90vh;
+        width: 94vw;
+        top: 5vh;
+        left: 3vw;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .popup-header {
+        height: auto;
+        width: 300px;
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+
+    .popup-header h1 {
+        font-size: 1.5em;
+        
+    }
+    
+    .popup-image {
+        max-height: 480px;
+        max-width: 320px; 
+        height: 90%;
+        width: 90%;
+        padding: 10px;
+        background-color: black;
+        border: white 2px solid;
+        border-radius: 1.5em;  
+        transition: 500ms;
+        
+    }
+}
